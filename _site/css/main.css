@@ -21,6 +21,7 @@ h2 ~ p {
   max-width: 70%;
   text-align: center;
 }
+
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
@@ -176,4 +177,7 @@ h2 ~ p {
 .footer-nav li {
   display: inline-block;
   margin: 2em 1em 0;
+}
+.footer-list {
+  margin-top: 10px;
 }
