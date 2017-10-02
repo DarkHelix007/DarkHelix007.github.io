@@ -8,11 +8,14 @@ h1 {
   margin-top: 0;
 }
 a {
-  color: #f00;
+  color: #6397b5;
 }
 html {
   box-shadow: 0 0 0 30px #000 inset;
   padding: 0 30px;
+}
+p {
+  line-height: 1.5;
 }
 h2 ~ p {
   font-size: 0.8em;
@@ -25,8 +28,50 @@ h2 ~ p {
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
-  height: 50vh;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 10vh;
+  background-size: cover;
 }
+.full-hero:after {
+  bottom: 2vh;
+  color: #fff;
+  content: "";
+  font-size: 36px;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  height: 0;
+  width: 0;
+  border: 10px solid;
+  border-color: #fff transparent transparent;
+}
+.hero-home {
+  background-image: url(/images/shark.jpg);
+  background-position: center top;
+}
+.hero-content {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  top: 60%;
+  transform: translate(0, -50%);
+}
+.hero-content .social-link {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #557c83;
+}
+.hero-content .social-link:hover {
+  background-color: #000;
+  color: #fff;
+}
+.hero-content h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 7vw;
+  margin-bottom: 0.25em;
+}
+
 
 /* SOCIAL STYLES */
 .social-link {
@@ -117,6 +162,30 @@ h2 ~ p {
   color: #fff;
 }
 
+/* HOMEPAGE STYLES*/
+.home-section {
+  margin: 6rem auto;
+  width: 90vw;
+  max-width: 960px;
+}
+.home-section h2 {
+  margin-bottom: 1.5em;
+  text-align: center;
+}
+.home-callout {
+  background-color: #000;
+  color: #fff;
+  padding: 7vh 0;
+}
+.callout-title {
+  font-size: 6vw;
+  text-align: right;
+  text-transform: uppercase;
+}
+.callout-copy {
+  font-size: 0.8rem;
+}
+
 /* BIO STYLES */
 .bio-wrapper {
   font-size: 24px;
@@ -125,25 +194,25 @@ h2 ~ p {
   overflow: hidden;
 }
 .bio-box {
-  border: 1px solid black;
   box-sizing: border-box;
   float: left;
   font-size: 1rem;
-  margin: 40px 1% 0;
-  padding: 0 2% 2%;
-  width: 23%;
+  margin: 6rem 0 0;
+  padding: 0 3%;
+  width: 33%;
 }
 .bio-box h3 {
   color: #fff;
   font-size: 1.5em;
   margin: -40px 0 1em;
   text-align: center;
+  text-transform: uppercase;
 }
 .bio-box img {
   width: 100%;
 }
 .bio-copy {
-  font-size: 1em;
+  font-size: 0.75em;
   line-height: 1.5;
 }
 .bio-copy a {
@@ -151,7 +220,7 @@ h2 ~ p {
 }
 .bio-box .social-link {
   display: block;
-  margin: 2em 0 1em;
+  margin: 2em auto 1em;
 }
 
 /* FOOTER STYLES */
