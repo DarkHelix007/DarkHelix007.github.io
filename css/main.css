@@ -1,6 +1,9 @@
 
 /* GLOBAL STYLES */
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   font-family: helvetica, arial, sans;
 }
 h1 {
@@ -16,6 +19,7 @@ html {
 }
 p {
   line-height: 1.5;
+  margin: 0.75em 0;
 }
 h2 ~ p {
   font-size: 0.8em;
@@ -24,11 +28,17 @@ h2 ~ p {
   max-width: 70%;
   text-align: center;
 }
+.content-container {
+  flex: 1 1 auto ;
+  padding-top: 10vh;
+  width: 100%;
+  display: flex;
+}
 
 /* HERO STYLES */
 .full-hero {
   background-color: #c7dbfc;
-  height: 100vh;
+  height: 90vh;
   box-sizing: border-box;
   padding: 10vh;
   background-size: cover;
@@ -176,14 +186,24 @@ h2 ~ p {
   background-color: #000;
   color: #fff;
   padding: 7vh 0;
+  display: flex;
+  flex-align: center;
 }
 .callout-title {
-  font-size: 6vw;
+  font-size: 5.3vw;
   text-align: right;
   text-transform: uppercase;
+  padding-top: 5.5vh;
+  flex: 1;
 }
 .callout-copy {
   font-size: 0.8rem;
+  padding: 0 3vw;
+  flex: 0 1 45em;
+}
+.home-callout h3 {
+  color: inherit;
+  margin-top: 1em;
 }
 
 /* BIO STYLES */
@@ -223,6 +243,45 @@ h2 ~ p {
   margin: 2em auto 1em;
 }
 
+/*GALLERY STYLES*/
+.gallery-thumbs {
+  height: 90vh;
+  overflow: scroll;
+}
+.gallery-thumbs > div {
+  cursor: pointer;
+}
+.gallery-thumbs img {
+  box-sizing: border-box;
+  box-shadow: 0 0 0 5px transparent;
+  display: inline-block;
+  margin: 0 0 10px;
+  opacity: 0.5;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+}
+.gallery-thumbs img:hover {
+  opacity: 1;
+}
+.gallery-thumbs .current img {
+  box-shadow: 0 0 0 5px #ed6e2f;
+  opacity: 1;
+}
+.gallery-photo {
+  position: relative;
+}
+.gallery-photo img {
+  width: 100%;
+}
+.gallery-info {
+  font-size: 0.8rem;
+}
+.gallery-info h3 {
+  margin-bottom: 1em;
+}
+  
+
+
 /* FOOTER STYLES */
 .footer {
   padding: 10vh 0 15vh;
@@ -249,4 +308,26 @@ h2 ~ p {
 }
 .footer-list {
   margin-top: 10px;
+}
+
+/*COLUMN STYLES*/
+.col-three {
+  display: flex;
+  flex: 1;
+}
+.col {
+  box-sizing: border-box;
+  padding: 2em;
+}
+.col-three .col ~ .col {
+  border-left: 1px solid rgba(0,0,0,0.1);
+}
+.col-three .col-nav {
+  flex: 0 1 15em;
+}
+.col-three .col-content {
+  flex: 1 ;
+}
+.col-three .col-aside {
+  flex: 0 1 20em;
 }
